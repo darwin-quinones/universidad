@@ -1,13 +1,13 @@
 {
     "builds": [{
-        "src": "universidad/universidad/wsgi.py",
+        "src": "universidad/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "universidad/universidad/wsgi.py"
+            "dest": "universidad/wsgi.py"
         }
     ]
 }
