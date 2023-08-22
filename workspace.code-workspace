@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"path": "..\\git_proyect"
+		},
+		{
+			"path": "..\\sistema"
+		},
+		{
+			"path": "..\\django_login"
+		},
+		{
+			"path": "..\\premiosplatzi"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\cute"
+		},
+		{
+			"path": "..\\blog-python"
+		},
+		{
+			"path": "..\\sistemaEmpleados"
+		},
+		{
+			"path": "..\\task-adder"
+		},
+		{
+			"path": "..\\course_python2"
+		},
+		{
+			"path": "..\\Course-Platzy"
+		}
+	],
+	"settings": {}
+}
