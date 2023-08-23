@@ -48,3 +48,8 @@ def eliminarCurso(request, codigo):
     messages.success(request, 'Curso Eliminado')
     return redirect('/')
 
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
+
+

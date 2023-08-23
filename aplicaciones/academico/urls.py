@@ -12,3 +12,6 @@ urlpatterns = [
     path('editCurso/', views.editCurso),
     path('eliminarCurso/<codigo>', views.eliminarCurso),
 ]
+
+# Configure the custom 404 view
+handler404 = views.custom_404
