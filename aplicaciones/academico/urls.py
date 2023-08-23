@@ -1,6 +1,9 @@
 from django.urls import path
 
 from . import views
+# para cargar Images
+
+
 
 urlpatterns = [
     path('', views.home, name='home'),

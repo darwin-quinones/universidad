@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Curso
 from django.contrib import messages
-from django.contrib.auth import login, logout, authenticate
-# Create your views here.
 
 def home(request):
     cursos = Curso.objects.all()
@@ -13,14 +11,14 @@ def registrarCurso(request):
     codigo = request.POST['codigo']
     nombre = request.POST['nombre']
     creditos = request.POST['creditos']
-    exists_curso = Curso.objects.get(codigo=codigo)
-    # verify if exists the curso
-    if(exists_curso):
+    try :
+        Curso.objects.create(codigo=codigo, nombre=nombre, creditos=creditos)
+        messages.success(request, 'Curso Registrado')
+        return redirect('/')
+    except:
         messages.error(request, '¡ El curso ya se encuentra registrado !')
         return redirect('/')
-    Curso.objects.create(codigo=codigo, nombre=nombre, creditos=creditos)
-    messages.success(request, 'Curso Registrado')
-    return redirect('/')
+    
 
 # aquí  se obtienen y se manda ala vista
 def editarCurso(request, codigo):
